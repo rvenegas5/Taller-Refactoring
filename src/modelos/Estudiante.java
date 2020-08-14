@@ -2,22 +2,16 @@ package modelos;
 
 import java.util.ArrayList;
 
-public class Estudiante{
+public class Estudiante extends Persona{
     //Informacion del estudiante
     private String matricula;
-    private String nombre;
-    private String apellido;
     private String facultad;
-    private int edad;
-    private InformacionPersonal informacion;
     private ArrayList<Paralelo> paralelos;
 
-    public Estudiante(String matricula, String nombre, String apellido, String facultad, int edad) {
+    public Estudiante(String matricula, String facultad, String nombre, String apellido, int edad, InformacionPersonal informacion) {
+        super(nombre, apellido, edad, informacion);
         this.matricula = matricula;
-        this.nombre = nombre;
-        this.apellido = apellido;
         this.facultad = facultad;
-        this.edad = edad;
     }
     
     //Getter y setter de Matricula
@@ -30,25 +24,6 @@ public class Estudiante{
         this.matricula = matricula;
     }
 
-    //Getter y setter del Nombre
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-    
-    //Getter y setter del Apellido
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-    
-    //Getter y setter de la Facultad
     public String getFacultad() {
         return facultad;
     }
@@ -56,19 +31,8 @@ public class Estudiante{
     public void setFacultad(String facultad) {
         this.facultad = facultad;
     }
-    
-    //Getter y setter de la edad
-    public int getEdad() {
-        return edad;
-    }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-    
     //Getter y setter de la direccion
-    
-
     public ArrayList<Paralelo> getParalelos() {
         return paralelos;
     }

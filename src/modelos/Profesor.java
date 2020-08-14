@@ -2,16 +2,13 @@ package modelos;
 
 import java.util.ArrayList;
 
-public class Profesor {
+public class Profesor extends Persona{
     private String codigo;
-    private String nombre;
-    private String apellido;
-    private int edad;
-    private InformacionPersonal informacion;
     private InformacionAdicionalProfesor info;
     private ArrayList<Paralelo> paralelos;
 
-    public Profesor(String codigo, String nombre, String apellido, int edad) {
+    public Profesor(String codigo, String nombre, String apellido, int edad, InformacionPersonal informacion) {
+        super(nombre, apellido, edad, informacion);
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -28,38 +25,6 @@ public class Profesor {
 
     public void setCodigo(String codigo) {
         this.codigo = codigo;
-    }
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getApellido() {
-        return apellido;
-    }
-
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
-
-    public int getEdad() {
-        return edad;
-    }
-
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
-    public InformacionPersonal getInformacion() {
-        return informacion;
-    }
-
-    public void setInformacion(InformacionPersonal informacion) {
-        this.informacion = informacion;
     }
 
     public InformacionAdicionalProfesor getInfo() {
