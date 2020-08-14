@@ -47,9 +47,7 @@ public class Profesor extends Persona{
         paralelos.remove(p);
     }
     
-    public double calcularSueldo(Profesor prof){
-        double sueldo=0;
-        sueldo= prof.getInfo().getAñosdeTrabajo()*600 + prof.getInfo().getBonoFijo();
-        return sueldo;
+    public double calcularSueldo(){
+        return getInfo().getAñosdeTrabajo()*600 + getInfo().getBonoFijo();
     }  
 }
