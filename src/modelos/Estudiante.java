@@ -9,18 +9,15 @@ public class Estudiante{
     private String apellido;
     private String facultad;
     private int edad;
-    private Direccion direccion;
-    private Telefono telefono;
+    private InformacionPersonal informacion;
     private ArrayList<Paralelo> paralelos;
 
-    public Estudiante(String matricula, String nombre, String apellido, String facultad, int edad, Direccion direccion, Telefono telefono) {
+    public Estudiante(String matricula, String nombre, String apellido, String facultad, int edad) {
         this.matricula = matricula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.facultad = facultad;
         this.edad = edad;
-        this.direccion = direccion;
-        this.telefono = telefono;
     }
     
     //Getter y setter de Matricula
@@ -70,26 +67,7 @@ public class Estudiante{
     }
     
     //Getter y setter de la direccion
-    public Direccion getDireccion() {
-        return direccion;
-    }
-
-    public void setDireccion(Direccion direccion) {
-        this.direccion = direccion;
-    }
-
-    public void setTelefono(Telefono telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setParalelos(ArrayList<Paralelo> paralelos) {
-        this.paralelos = paralelos;
-    }
     
-
-    public Telefono getTelefono() {
-        return telefono;
-    }
 
     public ArrayList<Paralelo> getParalelos() {
         return paralelos;

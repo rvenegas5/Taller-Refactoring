@@ -7,19 +7,15 @@ public class Profesor {
     private String nombre;
     private String apellido;
     private int edad;
-    private final Direccion direccion;
-    private final Telefono telefono;
+    private InformacionPersonal informacion;
     private InformacionAdicionalProfesor info;
     private ArrayList<Paralelo> paralelos;
 
-    public Profesor(String codigo, String nombre, String apellido, int edad, Direccion direccion, Telefono telefono) {
+    public Profesor(String codigo, String nombre, String apellido, int edad) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.direccion = direccion;
-        this.telefono = telefono;
-        paralelos= new ArrayList<>();
     }
     
     public void anadirParalelos(Paralelo p){
@@ -58,12 +54,12 @@ public class Profesor {
         this.edad = edad;
     }
 
-    public Direccion getDireccion() {
-        return direccion;
+    public InformacionPersonal getInformacion() {
+        return informacion;
     }
 
-    public Telefono getTelefono() {
-        return telefono;
+    public void setInformacion(InformacionPersonal informacion) {
+        this.informacion = informacion;
     }
 
     public InformacionAdicionalProfesor getInfo() {
