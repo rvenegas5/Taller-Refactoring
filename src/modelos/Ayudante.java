@@ -40,8 +40,12 @@ public class Ayudante {
         return paralelos;
     }
 
-    public void setParalelos(ArrayList<Paralelo> paralelos) {
-        this.paralelos = paralelos;
+    public void addParalelo(Paralelo p){
+        paralelos.add(p);
+    }
+    
+    public void removeParalelo(Paralelo p){
+        paralelos.remove(p);
     }
     
 }

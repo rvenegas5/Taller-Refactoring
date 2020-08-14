@@ -39,9 +39,17 @@ public class Profesor extends Persona{
         return paralelos;
     }
 
-    public void setParalelos(ArrayList<Paralelo> paralelos) {
-        this.paralelos = paralelos;
+    public void addParalelo(Paralelo p){
+        paralelos.add(p);
     }
     
+    public void removeParalelo(Paralelo p){
+        paralelos.remove(p);
+    }
     
+    public double calcularSueldo(Profesor prof){
+        double sueldo=0;
+        sueldo= prof.getInfo().getAñosdeTrabajo()*600 + prof.getInfo().getBonoFijo();
+        return sueldo;
+    }  
 }
