@@ -7,12 +7,12 @@ public class Profesor {
     private String nombre;
     private String apellido;
     private int edad;
-    private String direccion;
-    private String telefono;
+    private Direccion direccion;
+    private Telefono telefono;
     private InformacionAdicionalProfesor info;
     private ArrayList<Paralelo> paralelos;
 
-    public Profesor(String codigo, String nombre, String apellido, int edad, String direccion, String telefono) {
+    public Profesor(String codigo, String nombre, String apellido, int edad, Direccion direccion, Telefono telefono) {
         this.codigo = codigo;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -58,20 +58,12 @@ public class Profesor {
         this.edad = edad;
     }
 
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public String getTelefono() {
+    public Telefono getTelefono() {
         return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
 
     public InformacionAdicionalProfesor getInfo() {

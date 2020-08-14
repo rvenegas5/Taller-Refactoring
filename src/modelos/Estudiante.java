@@ -9,9 +9,20 @@ public class Estudiante{
     private String apellido;
     private String facultad;
     private int edad;
-    private String direccion;
-    private String telefono;
+    private Direccion direccion;
+    private Telefono telefono;
     private ArrayList<Paralelo> paralelos;
+
+    public Estudiante(String matricula, String nombre, String apellido, String facultad, int edad, Direccion direccion, Telefono telefono, ArrayList<Paralelo> paralelos) {
+        this.matricula = matricula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.facultad = facultad;
+        this.edad = edad;
+        this.direccion = direccion;
+        this.telefono = telefono;
+        this.paralelos = paralelos;
+    }
     
     //Getter y setter de Matricula
 
@@ -60,22 +71,12 @@ public class Estudiante{
     }
     
     //Getter y setter de la direccion
-    public String getDireccion() {
+    public Direccion getDireccion() {
         return direccion;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-    
-    //Getter y setter del telefono
-
-    public String getTelefono() {
+    public Telefono getTelefono() {
         return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
     }
     
     //Calcula y devuelve la nota inicial contando examen, deberes, lecciones y talleres. El teorico y el practico se calcula por parcial.
